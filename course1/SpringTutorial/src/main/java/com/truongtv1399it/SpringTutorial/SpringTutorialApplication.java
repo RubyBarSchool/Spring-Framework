@@ -26,6 +26,8 @@ public class SpringTutorialApplication {
 		BBSort bbSort = (BBSort) applicationContext.getBean("BBSort");
 		bbSort.run();
 		System.out.println(someExternalService.getUrl());
+		CurencyService curencyService = applicationContext.getBean(CurencyService.class);
+		System.out.println(curencyService.toString());
 	}
 
 }

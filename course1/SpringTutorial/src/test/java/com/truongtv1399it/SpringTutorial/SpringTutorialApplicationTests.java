@@ -1,7 +1,7 @@
 package com.truongtv1399it.SpringTutorial;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -42,6 +42,26 @@ class SpringTutorialApplicationTests {
 		System.out.println(result);
 		int expectedResult = 0;
 		Assert.assertEquals(expectedResult,result);
+	}
+
+	@BeforeEach
+	void beforeEach(){
+		System.out.println("Before each");
+	}
+
+	@AfterEach
+	void afterEach(){
+		System.out.println("After each");
+	}
+
+	@BeforeAll
+	static void beforeAll(){
+		System.out.println("Before all");
+	}
+
+	@AfterAll
+	static void afterAll(){
+		System.out.println("After all");
 	}
 
 }
